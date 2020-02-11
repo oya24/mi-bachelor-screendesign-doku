@@ -13,7 +13,7 @@ Enthält alle Regeln zu Module.
 /* Portfolio Item
 -----------------------------------------------------------------------------*/
 
-.m-portfolioItem{
+.m-portfolioItem, .m-portfolioItemCentered, .m-portfolioItem3Columns, .m-portfolioItemCenteredImg{
   margin-bottom: var(--xxxl);
 }
 
@@ -23,9 +23,20 @@ Enthält alle Regeln zu Module.
     grid-template-columns: 33% 1fr;
     grid-column-gap: var(--xl);
   }
+  .m-portfolioItemCenteredImg{
+    display: block;
+  }
+  .m-portfolioItemCentered{
+    padding-left: 10%;
+  }
+  .m-portfolioItem3Columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: var(--xl);
+  }
 }
 
-.m-portfolioItem + .m-portfolioItem {
+.m-portfolioItem + *, .m-portfolioItemCentered + *, .m-portfolioItem3Columns + *, .m-portfolioItemCenteredImg + * {
   border-top: solid 1px var(--color-text-light);
   padding-top: var(--xxxl);
   margin-top: var(--xxxl);
