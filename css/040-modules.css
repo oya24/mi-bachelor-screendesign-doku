@@ -13,14 +13,19 @@ Enthält alle Regeln zu Module.
 /* Portfolio Item
 -----------------------------------------------------------------------------*/
 
-.m-portfolioItem, .m-portfolioItemCentered, .m-portfolioItem3Columns, .m-portfolioItemCenteredImg{
+.m-portfolioItem, .m-portfolioItemCentered, .m-portfolioItem3Columns, .m-portfolioItemCenteredImg, .m-portfolioItem2Columns{
   margin-bottom: var(--xxxl);
 }
 
 @media only screen and (min-width: 801px) {
   .m-portfolioItem{
     display: grid;
-    grid-template-columns: 33% 1fr;
+    grid-template-columns: 31.677% 1fr;
+    grid-column-gap: var(--xl);
+  }
+  .m-portfolioItem2Columns{
+    display: grid;
+    grid-template-columns: 50% 1fr;
     grid-column-gap: var(--xl);
   }
   .m-portfolioItemCenteredImg{
@@ -28,6 +33,8 @@ Enthält alle Regeln zu Module.
   }
   .m-portfolioItemCentered{
     padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 8%;
   }
   .m-portfolioItem3Columns{
     display: grid;
@@ -36,7 +43,7 @@ Enthält alle Regeln zu Module.
   }
 }
 
-.m-portfolioItem + *, .m-portfolioItemCentered + *, .m-portfolioItem3Columns + *, .m-portfolioItemCenteredImg + * {
+.m-portfolioItem + *, .m-portfolioItemCentered + *, .m-portfolioItem3Columns + *, .m-portfolioItemCenteredImg + *, .m-portfolioItem2Columns + *{
   border-top: solid 1px var(--color-text-light);
   padding-top: var(--xxxl);
   margin-top: var(--xxxl);
@@ -52,11 +59,28 @@ Enthält alle Regeln zu Module.
   margin-top: calc(var(--m) * -1);
 }
 
+.m-portfolioItemCentered-subtitle{
+  margin-top: 0%;
+}
+.m-portfolioItemCentered-title{
+  margin-bottom: var(--xs);
+}
+
 .m-portfolioItem-image{
   margin-bottom: var(--m);
 }
 
+.m-portfolioItem3Columns .m-portfolioItem-image{
+  margin-bottom: var(--xl);
+}
 
+.m-portfolioItem3Columns h3{
+  margin-top: 1em;
+}
+
+.m-portfolioItemCenteredImg .m-portfolioItem-image{
+  margin-bottom: 0;
+}
 
 
 

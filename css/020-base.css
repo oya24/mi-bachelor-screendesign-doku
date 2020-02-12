@@ -49,6 +49,7 @@ Enthält alle CSS Variabeln und grundlegende Regeln.
     --color-backgrounds: #efefef;
     --color-borders: rgba(0, 0, 0, 0.3);
     --color-button-bg: rgba(0, 0, 0, 0.8);
+    --color-background-dark: rgba(0,0,0,0.7);
 
     /* Groessen
     ----------------------------------------*/
@@ -172,16 +173,18 @@ h3:first-of-type {
   margin-top: calc(var(--m) * -1); /*calc(var(--xs) - var(--m)); */
 }
 
-
 /* Mengentexte
 ----------------------------------------------------------------------------*/
 
 p, li, td, th{
   line-height: 130%;
 }
+.m-portfolioItemCentered p {
+  line-height: 140%;
+}
 
 .is-big {
-  font-size: 130%;
+  font-size: 115%;
 }
 
 
